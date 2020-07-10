@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css">
+    
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Give+You+Glory&family=Londrina+Sketch&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handlee&family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+  <div class="container">
+    <div class="weatherAPP">
+      <form>
+        <div class="form-row">
+          <div class="col-auto">
+            <input
+              type="text"
+              class="form-control mb-1"
+               
+              placeholder="Enter a City"
+              id="cityChosen" 
+            />
+          </div>
+
+          <div class="col-auto">
+            <div class="buttonWorld">
+              <input type="image" src="src/mundo.jpg" width="35" id="buttonWorld" />
+            </div>
+            
+          </div>
+          <button type="button" class="btn btn-info" id="buttonCurrentLocation">Current Location</button>
+        </div>
+        <div class="currentCity" id="currentCity">Where are you?</div>
+        <div class="currentDay" id="currentDay">What day is it?</div>
+        <div class="currentTemperature" id="temperature">What temperature is it?</div>
+        <div class="daysWeek">
+          <div class="row">
+            <div class="col-1.7">
+              <div class="Monday">    
+                <ul>
+                <li>
+                  Monday
+                </li>
+                <li>
+                  <img src="src/sun.jpg" alt="" width="50" />
+                </li>
+                <li>
+                  17º/22º
+                </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-1.7">
+              <div class="Tuesday">
+                <ul>
+                  <li>
+                    Tuesday
+                  </li>
+                  <li>
+                    <img src="src/sun_rain.jpg" alt="" width="50" />
+                  </li>
+                  <li>
+                    17º/22º
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-1.7">
+              <div class="Wednesday">
+                <ul>
+                  <li>
+                    Wednesday
+                  </li>
+                  <li>
+                    <img src="src/run_cloud.jpg" alt="" width="50" />
+                  </li>
+                  <li>
+                    17º/22º
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-1.7">
+              <div class="Thrusday">
+                <ul>
+                  <li>
+                    Thrusday
+                  </li>
+                  <li>
+                    <img src="src/sun_rain.jpg" alt="" width="50" />
+                  </li>
+                  <li>
+                    17º/22º
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-1.7">
+              <div class="Friday">
+                <ul>
+                  <li>
+                    Friday
+                  </li>
+                  <li>
+                    <img src="src/sun.jpg" alt="" width="50" />
+                  </li>
+                  <li>
+                    17º/22º
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-1.7">
+              <div class="Saturday">
+                <ul>
+                  <li>
+                    Saturday
+                  </li>
+                  <li>
+                    <img src="src/sun.jpg" alt="" width="50" />
+                  </li>
+                  <li>
+                    17º/22º
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-1.7">
+              <div class="Sunday">
+                <ul>
+                  <li>
+                    Sunday
+                  </li>
+                  <li>
+                    <img src="src/run_cloud.jpg" alt="" width="50" />
+                  </li>
+                  <li>
+                    17º/22º
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+
+      
+      </div>
+    </div>
+    <p class="footer">
+      This page was built by
+      <a
+        href="https:///www.linkedin.com/in/beatriz-albuquerque-684190120/"
+        target="_blank"
+      >
+        Beatriz Albuquerque
+      </a>
+    </p>
+    <script src="src/script.js">
+      
+    </script>
+
+
+
+  </body>
+</html>
