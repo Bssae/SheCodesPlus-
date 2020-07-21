@@ -43,7 +43,7 @@ function showCity(event) {
     currentCity.innerHTML = document.querySelector("currentCity");
     currentCity.innerHTML = `${location}`;
     let currentDay = document.querySelector("#currentDay");
-    currentDay.innerHTML = `${currentDayWeek} ${hour}:${minutes}h`;
+    currentDay.innerHTML = `Last update on ${currentDayWeek} ${hour}:${minutes}h`;
   }
   function getCurrentPosition() {
     navigator.geolocation.getCurrentPosition(showCurrentLocation);
