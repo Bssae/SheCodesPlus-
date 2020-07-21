@@ -4,7 +4,7 @@ function showCity(event) {
     let currentCity = document.querySelector("#currentCity");
     currentCity.innerHTML = `${cityChosen.value}`;
     let currentDay = document.querySelector("#currentDay");
-    currentDay.innerHTML = `${currentDayWeek} ${hour}:${minutes}h`;
+    currentDay.innerHTML = `Last update on  ${currentDayWeek} ${hour}:${minutes}h`;
     showTemperature();
   }
   
@@ -22,7 +22,8 @@ function showCity(event) {
   function showCityTemperature(response) {
     let locationTemperature = Math.round(response.data.main.temp);
     let temperature = document.querySelector("#temperature");
-    temperature.innerHTML = `${locationTemperature}ºC`;
+    let descriptionTemperature=(response.data.weather[0].description);
+    temperature.innerHTML = `${locationTemperature}°C and ${descriptionTemperature}`;
   }
   
   function showCurrentLocation(position) {
@@ -37,8 +38,9 @@ function showCity(event) {
   function showCurrentTemperature(response) {
     console.log(response.data.name);
     let locationTemperature = Math.round(response.data.main.temp);
+    let descriptionTemperature=(response.data.weather[0].description);
     let temperature = document.querySelector("#temperature");
-    temperature.innerHTML = `${locationTemperature}°C`;
+    temperature.innerHTML = `${locationTemperature}°C and ${descriptionTemperature}` ;
     let location = response.data.name;
     currentCity.innerHTML = document.querySelector("currentCity");
     currentCity.innerHTML = `${location}`;
