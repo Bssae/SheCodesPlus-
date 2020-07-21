@@ -26,7 +26,7 @@
     margin: 30px;
     font-weight: 100px;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    font-size: 20px;
+    font-size: 50px;
     color: black;
     font-family: "Patrick Hand", cursive;
   }
@@ -51,10 +51,10 @@
   .currentDay {
     margin: 30px;
     font-weight: 100px;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    font-size: 20px;
+    font-family:  "Patrick Hand", cursive;
+    font-size: 18px;
     color: black;
-    font-family: "Patrick Hand", cursive;
+    
   }
   
   .footer {
