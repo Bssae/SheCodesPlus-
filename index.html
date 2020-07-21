@@ -24,27 +24,31 @@
   </head>
   <body>
   <div class="container">
+    
     <div class="weatherAPP">
-      <form>
+      <form class="form-inline">
+
         <div class="form-row">
+          <button type="submit" class="btn btn-info mb-2">Current City</button>
+
           <div class="col-auto">
             <input
               type="text"
               class="form-control mb-1"
                
-              placeholder="Enter a City"
+              placeholder="or Enter a City"
               id="cityChosen" 
             />
           </div>
-
+          
           <div class="col-auto">
             <div class="buttonWorld">
               <input type="image" src="src/mundo.jpg" width="35" id="buttonWorld" />
             </div>
             
           </div>
-          <br>
-          <button type="button" class="btn btn-info" id="buttonCurrentLocation">Current Location</button>
+    
+          
         </div>
         <div class="currentCity" id="currentCity">Where are you?</div>
         <div class="currentDay" id="currentDay">What day is it?</div>

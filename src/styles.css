@@ -2,8 +2,16 @@
     padding-top: 20px;
     padding-left: 20px;
   }
+  
+
+  
+  .buttonWorld{
+    margin-right:6px;
+  }
+
   .buttonWorld:hover {
     opacity: 0.3;
+    
   }
   .weatherAPP {
     border: 10px solid rgb(164, 233, 233);
