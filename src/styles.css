@@ -23,16 +23,33 @@
   }
   
   #currentTemperature {
-    margin: 30px;
+    margin-top: 10px;
     font-weight: 100px;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-size: 50px;
     color: black;
     font-family: "Patrick Hand", cursive;
+    text-align: center;
   }
-  
- .weather-forecast{
+  #currentCity {
     margin-top: 10px;
+    line-height: 100px;
+    font-weight: 600;
+    font-family: "Londrina Sketch", cursive;
+    font-size: 100px;
+    color: black;
+    text-align:center;
+  }
+  #currentDay {
+    margin-top:10px;
+    font-weight: 100px;
+    font-family:  "Patrick Hand", cursive;
+    font-size: 18px;
+    color: black;
+    text-align:center;
+  }
+ .weather-forecast{
+    margin: 10px auto;
  }
 
  .weather-forecast h6{
@@ -50,29 +67,18 @@
    font-family:"Patrick Hand", cursive;
    padding-top:5px; 
  }
-  #currentCity {
-    margin: 30px;
-    line-height: 100px;
-    font-weight: 600;
-    font-family: "Londrina Sketch", cursive;
-    font-size: 100px;
-    color: black;
-  }
-  #currentDay {
-    margin: 30px;
-    font-weight: 100px;
-    font-family:  "Patrick Hand", cursive;
-    font-size: 18px;
-    color: black;
+ 
+ 
     
-  }
+  
   
   .footer {
-    margin: 20px 0px 0px 0px;
+    
     text-align: center;
     font-family: monospace;
-    font-size: 12px;
+    font-size: 10px;
     background-color: none;
+    padding-top:20px;
   }
   
   .daysWeek{

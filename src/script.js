@@ -1,8 +1,9 @@
 function showCity(event) {
     event.preventDefault();
     let cityChosen = document.querySelector("#cityChosen");
+    
     let currentCity = document.querySelector("#currentCity");
-    currentCity.innerHTML = `${cityChosen.value}`;
+    currentCity.innerHTML = `${cityChosen.value.toUpperCase().trim()}`;
     let currentDay = document.querySelector("#currentDay");
     currentDay.innerHTML = `Last update on  ${currentDayWeek} ${hour}:${minutes}h`;
     showTemperature();
@@ -42,6 +43,7 @@ function showCity(event) {
     let temperature = document.querySelector("#temperature");
     temperature.innerHTML = `${locationTemperature}°C and ${descriptionTemperature}` ;
     let location = response.data.name;
+    location=location.toUpperCase().trim();    
     currentCity.innerHTML = document.querySelector("currentCity");
     currentCity.innerHTML = `${location}`;
     let currentDay = document.querySelector("#currentDay");
