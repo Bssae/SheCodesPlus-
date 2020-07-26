@@ -28,10 +28,14 @@ function showCity(event) {
 
   function showCityTemperature(response) {
     let locationTemperature = Math.round(response.data.main.temp);
+    let country=(response.data.sys.country);
+    console.log(country)
+    
     let temperature = document.querySelector("#currentTemperature");
     let descriptionTemperature=(response.data.weather[0].description);
     temperature.innerHTML = `${locationTemperature}°C and ${descriptionTemperature}`;
     showForecast();
+    
   }
 
 
@@ -48,35 +52,62 @@ function showCity(event) {
     let mondayTempMin=Math.round(response.data.list[0].main.temp_min);
     let mondayTempMax=Math.round(response.data.list[0].main.temp_max);
     forecastMondayElement.innerHTML=`<strong>${mondayTempMin}°/${mondayTempMax}°</strong>`;  
-    
     let mondayImage=(response.data.list[0].weather[0].description);
     console.log(mondayImage);
-    if (mondayImage=="clear sky"){
-      document.getElementById('beatriz').src="src/sun_rain.jpg";
-    }
-
-
-
+    if (mondayImage=="clear sky","few clouds"){
+      document.getElementById('imagetoday').src="src/sun.jpg"}
+      else{
+    document.getElementById('imagetoday').src="src/run_cloud.jpg"}
     let forecastTuesdayElement=document.querySelector("#tuesday");
     let tuesdayTempMin=Math.round(response.data.list[8].main.temp_min);
     let tuesdayTempMax=Math.round(response.data.list[8].main.temp_max);
     forecastTuesdayElement.innerHTML=`<strong>${tuesdayTempMin}°/${tuesdayTempMax}°</strong>`;
+    let tuesdayImage=(response.data.list[8].weather[0].description);
+    console.log(tuesdayImage);
+    if (tuesdayImage=="clear sky","few clouds"){
+      document.getElementById('imageToday1').src="src/sun.jpg"}
+      else{
+    document.getElementById('imageToday1').src="src/run_cloud.jpg"}
     let forecastWednesdayElement=document.querySelector("#wednesday");
     let wednesdayTempMin=Math.round(response.data.list[16].main.temp_min);
     let wednesdayTempMax=Math.round(response.data.list[16].main.temp_max);
     forecastWednesdayElement.innerHTML=`<strong>${wednesdayTempMin}°/${wednesdayTempMax}°</strong>`;
+    let wednesdayImage=(response.data.list[16].weather[0].description);
+    console.log(wednesdayImage);
+    if (wednesdayImage=="clear sky","few clouds"){
+      document.getElementById('imageToday2').src="src/sun.jpg"}
+      else{
+    document.getElementById('imageToday2').src="src/run_cloud.jpg"}    
     let forecastThursdayElement=document.querySelector("#thursday");
     let thursdayTempMin=Math.round(response.data.list[24].main.temp_min);
     let thursdayTempMax=Math.round(response.data.list[24].main.temp_max);
     forecastThursdayElement.innerHTML=`<strong>${thursdayTempMin}°/${thursdayTempMax}°</strong>`;
+    let thursdayImage=(response.data.list[24].weather[0].description);
+    console.log(thursdayImage);
+    if (wednesdayImage=="clear sky","few clouds"){
+      document.getElementById('imageToday3').src="src/sun.jpg"}
+      else{
+    document.getElementById('imageToday3').src="src/run_cloud.jpg"}      
     let forecastFridayElement=document.querySelector("#friday");
     let fridayTempMin=Math.round(response.data.list[32].main.temp_min);
     let fridayTempMax=Math.round(response.data.list[32].main.temp_max);
     forecastFridayElement.innerHTML=`<strong>${fridayTempMin}°/${fridayTempMax}°</strong>`;
+    let fridayImage=(response.data.list[32].weather[0].description);
+    console.log(fridayImage);
+    if (fridayImage=="clear sky","few clouds"){
+      document.getElementById('imageToday4').src="src/sun.jpg"}
+      else{
+    document.getElementById('imageToday4').src="src/run_cloud.jpg"}
     let forecastSaturdayElement=document.querySelector("#saturday");
     let saturdayTempMin=Math.round(response.data.list[39].main.temp_min);
     let saturdayTempMax=Math.round(response.data.list[39].main.temp_max);
     forecastSaturdayElement.innerHTML=`<strong>${saturdayTempMin}°/${saturdayTempMax}°</strong>`;
+    let saturdayImage=(response.data.list[39].weather[0].description);
+    console.log(saturdayImage);
+    if (saturdayImage=="clear sky","few clouds"){
+      document.getElementById('imageToday5').src="src/sun.jpg"}
+      else{
+    document.getElementById('imageToday5').src="src/run_cloud.jpg"}
     
   }
 
@@ -87,10 +118,10 @@ function showCity(event) {
       position.coords.latitude
     }&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
     console.log(apiUrl);
-    axios.get(apiUrl).then(showCurrentTemperature, updateWeather);
+    axios.get(apiUrl).then(showCurrentTemperature);
   }
   
-  function showCurrentTemperature(response) {
+  function showCurrentTemperature(response){
     
     let locationTemperature = Math.round(response.data.main.temp);
     let descriptionTemperature=(response.data.weather[0].description);
@@ -102,6 +133,7 @@ function showCity(event) {
     currentCity.innerHTML = `${location}`;
     let currentDay = document.querySelector("#currentDay");
     currentDay.innerHTML = `Last update on ${currentDayWeek} ${hour}:${minutes}h`;
+    
   }
   function getCurrentPosition() {
     navigator.geolocation.getCurrentPosition(showCurrentLocation);
@@ -114,12 +146,12 @@ function showCity(event) {
   let hour = now.getHours();
   let minutes = now.getMinutes();
   let week = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
     "Saturday"
   ];
   let currentDayWeek = week[now.getDay()];
