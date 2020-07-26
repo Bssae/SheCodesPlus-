@@ -19,7 +19,7 @@
     background-image: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%);
     padding:20px 20px;
     margin: 20px auto;
-    max-width: 550px;
+    max-width: 500px;
   }
   
   #currentTemperature {
@@ -29,16 +29,17 @@
     font-size: 50px;
     color: black;
     font-family: "Patrick Hand", cursive;
-    text-align: center;
+    text-align: left;
   }
   #currentCity {
     margin-top: 10px;
     line-height: 100px;
     font-weight: 600;
     font-family: "Londrina Sketch", cursive;
-    font-size: 100px;
+    font-size: 80px;
     color: black;
-    text-align:center;
+    text-align:left;
+    max-width: 200px;
   }
   #currentDay {
     margin-top:10px;
@@ -46,7 +47,7 @@
     font-family:  "Patrick Hand", cursive;
     font-size: 18px;
     color: black;
-    text-align:center;
+    text-align:left;
   }
  .weather-forecast{
     margin: 10px auto;
@@ -78,7 +79,7 @@
     font-family: monospace;
     font-size: 10px;
     background-color: none;
-    padding-top:20px;
+    padding: top 10px;
   }
   
   .daysWeek{
