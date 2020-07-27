@@ -27,17 +27,31 @@ function showCity(event) {
 
 
   function showCityTemperature(response) {
-    let locationTemperature = Math.round(response.data.main.temp);
-    let country=(response.data.sys.country);
-    console.log(country)
-    
+    celsiusTemperature=response.data.main.temp;
+    let descriptionCelsiusTemperature=(response.data.weather[0].description);
+    let locationTemperature = Math.round(celsiusTemperature);
     let temperature = document.querySelector("#currentTemperature");
-    let descriptionTemperature=(response.data.weather[0].description);
-    temperature.innerHTML = `${locationTemperature}°C and ${descriptionTemperature}`;
+    temperature.innerHTML = `${locationTemperature}°C`;
+    let description=document.querySelector("#currentDescription");
+    description.innerHTML=`${descriptionCelsiusTemperature}`;
+
+
+
+    let locationwindSpeed = Math.round(response.data.wind.speed);
+    let windSpeed = document.querySelector("#windSpeed");
+    windSpeed.innerHTML = `<i class="fas fa-wind"></i>${locationwindSpeed}km/h`;
+    let locationhumidity = Math.round(response.data.main.humidity);
+    let humidity = document.querySelector("#humidity");
+    humidity.innerHTML = `<i class="fas fa-tint"></i> ${locationhumidity}%`;
+    console.log(response.data);
+
+    
     showForecast();
     
   }
 
+  let celsiusTemperature=null;
+ 
 
   function showForecast(response){
     let city=`${cityChosen.value}`;
@@ -126,13 +140,22 @@ function showCity(event) {
     let locationTemperature = Math.round(response.data.main.temp);
     let descriptionTemperature=(response.data.weather[0].description);
     let temperature = document.querySelector("#currentTemperature");
-    temperature.innerHTML = `${locationTemperature}°C and ${descriptionTemperature}` ;
+    temperature.innerHTML = `${locationTemperature}°C` ;
     let location = response.data.name;
     location=location.toUpperCase().trim();    
     currentCity.innerHTML = document.querySelector("currentCity");
     currentCity.innerHTML = `${location}`;
     let currentDay = document.querySelector("#currentDay");
     currentDay.innerHTML = `Last update on ${currentDayWeek} ${hour}:${minutes}h`;
+    let description=document.querySelector("#currentDescription");
+    description.innerHTML=`${descriptionTemperature}`
+    let locationwindSpeed = Math.round(response.data.wind.speed);
+    let windSpeed = document.querySelector("#windSpeed");
+    windSpeed.innerHTML = `<i class="fas fa-wind"></i>${locationwindSpeed}km/h`;
+    let locationhumidity = Math.round(response.data.main.humidity);
+    let humidity = document.querySelector("#humidity");
+    humidity.innerHTML = `<i class="fas fa-tint"></i> ${locationhumidity}%`;
+    console.log(response.data);
     
   }
   function getCurrentPosition() {
@@ -180,4 +203,24 @@ function showCity(event) {
 
   updateDay();
 
-  
+  let clickChangeUnitF = document.querySelector("#fUnit");
+  clickChangeUnitF.addEventListener("click", changeUnitF);
+
+  function changeUnitF(event){
+    event.preventDefault();
+    let temperatureElementF=document.querySelector("#currentTemperature");
+    let fTemperature=(celsiusTemperature*9)/5+32;
+    temperatureElementF.innerHTML=Math.round(fTemperature)+"ºF";
+        
+  }
+
+  let clickChangeUnitC = document.querySelector("#cUnit");
+  clickChangeUnitC.addEventListener("click", changeUnitC);
+
+  function changeUnitC(event){
+    event.preventDefault();
+    let temperatureElementC=document.querySelector("#currentTemperature");
+    let CTemperature=(celsiusTemperature);
+    temperatureElementC.innerHTML=Math.round(celsiusTemperature)+"ºC";
+        
+  }

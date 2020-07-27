@@ -31,6 +31,14 @@
     font-family: "Patrick Hand", cursive;
     text-align: left;
   }
+  #currentDescription {
+    font-weight: 100px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 40px;
+    color: black;
+    font-family: "Patrick Hand", cursive;
+    text-align: left;
+  }
   #currentCity {
     margin-top: 10px;
     line-height: 100px;
@@ -49,8 +57,60 @@
     color: black;
     text-align:left;
   }
+ 
+  #humidity{
+    margin-top: 10px;
+    font-weight: 100px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 20px;
+    color: black;
+    font-family: "Patrick Hand", cursive;
+    text-align: left;
+    line-height: 20px;
+    
+  }
+  #windSpeed {
+    margin-top: 160px;
+    font-weight: 100px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 20px;
+    color: black;
+    font-family: "Patrick Hand", cursive;
+    text-align: left;
+    line-height: 20px;
+    
+  }
+
+  .fa-wind{
+    color:gray;
+    font-size:15px;
+
+  }
+
+.fa-tint{
+  color:gray;
+  font-size:15px;
+}
+
+  #changeMetrics {
+    margin-top: 10px;
+    font-weight: 100px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 20px;
+    color: black;
+    font-family: "Patrick Hand", cursive;
+    text-align: left;
+    line-height: 20px;
+  }
+
+#currentToday{
+  border: 2px solid rgb(177, 229, 229);
+    border-radius: 6px;
+    background-image: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%);
+
+}
  .weather-forecast{
-    margin: 10px auto;
+    margin: 40px auto;
  }
 
  .weather-forecast h6{
@@ -66,7 +126,7 @@
  .weather-forecast-temperature{
    text-align:center;
    font-family:"Patrick Hand", cursive;
-   padding-top:5px; 
+   padding-top:10px; 
  }
  
  
@@ -86,3 +146,5 @@
     margin:0 auto;
     
   }
+
+  
