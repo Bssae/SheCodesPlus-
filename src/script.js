@@ -175,7 +175,7 @@ function showCity(event) {
     "Wed",
     "Thu",
     "Fri",
-    "Saturday"
+    "Sat"
   ];
   let currentDayWeek = week[now.getDay()];
   let currentDayWeek1 = week[now.getDay()+1];
