@@ -136,7 +136,7 @@ function showCity(event) {
   }
   
   function showCurrentTemperature(response){
-    
+    celsiusTemperature=response.data.main.temp;
     let locationTemperature = Math.round(response.data.main.temp);
     let descriptionTemperature=(response.data.weather[0].description);
     let temperature = document.querySelector("#currentTemperature");
@@ -169,6 +169,34 @@ function showCity(event) {
   let hour = now.getHours();
   let minutes = now.getMinutes();
   let week = [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
     "Sun",
     "Mon",
     "Tue",
